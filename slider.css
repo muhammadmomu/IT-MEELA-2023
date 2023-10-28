@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+
+:root {
+	--img: url();
+}
+
+html {
+	background-color: #fff;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: cover;
+	background-position: center center;
+	background-image: var(--img, url(https://cdn.josetxu.com/img/gp-fisura-saqueadores.jpg));
+	transition: background 0.5s ease 0s;
+	font-family: 'Londrina Solid', cursive;
+}
+
+body:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #110319;
+	z-index: 0;
+}
+
+.content {
+	width: 100vmin;
+	height: 100vmin;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: cover;
+	background-position: center center;
+	background-image: var(--img,);
+	transition: background 0.5s ease 0s;
+	max-width: 750px;
+	max-height: 750px;
+	border-radius: 2px;
+	z-index: 0;
+	background-color: #000000;
+}
+
+
+
+/* CONTROLS */
+.controls {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: absolute;
+}
+
+input[type=radio] {
+	display: none;
+}		
+
+label {
+	width: 50vw;
+	height: 100vh;
+	position: relative;
+	cursor: pointer;
+	opacity: 0.15;
+}
+
+label:hover {
+	opacity: 1;
+}
+
+input:first-child:checked ~ .content .controls label:first-child,
+input:last-of-type:checked ~ .content .controls label:last-of-type {
+	cursor: default;
+	opacity: 0.025;
+}
+
+
+/* HIDE LABELS */
+#b2:checked ~ .content .controls label[for=b2], 
+#b3:checked ~ .content .controls label[for=b3], 
+#b4:checked ~ .content .controls label[for=b4], 
+#b5:checked ~ .content .controls label[for=b5], 
+#b6:checked ~ .content .controls label[for=b6], 
+#b7:checked ~ .content .controls label[for=b7],
+
+#b3:checked ~ .content .controls label[for=b1],
+#b4:checked ~ .content .controls label[for=b1],
+#b4:checked ~ .content .controls label[for=b2],
+#b5:checked ~ .content .controls label[for=b1],
+#b5:checked ~ .content .controls label[for=b2],
+#b5:checked ~ .content .controls label[for=b3],
+#b6:checked ~ .content .controls label[for=b1],
+#b6:checked ~ .content .controls label[for=b2],
+#b6:checked ~ .content .controls label[for=b3],
+#b6:checked ~ .content .controls label[for=b4],
+#b7:checked ~ .content .controls label[for=b1],
+#b7:checked ~ .content .controls label[for=b2],
+#b7:checked ~ .content .controls label[for=b3],
+#b7:checked ~ .content .controls label[for=b4],
+#b7:checked ~ .content .controls label[for=b5],
+#b8:checked ~ .content .controls label[for=b1],
+#b8:checked ~ .content .controls label[for=b2],
+#b8:checked ~ .content .controls label[for=b3],
+#b8:checked ~ .content .controls label[for=b4],
+#b8:checked ~ .content .controls label[for=b5],
+#b8:checked ~ .content .controls label[for=b6],
+#b9:checked ~ .content .controls label[for=b1],
+#b9:checked ~ .content .controls label[for=b2],
+#b9:checked ~ .content .controls label[for=b3],
+#b9:checked ~ .content .controls label[for=b4],
+#b9:checked ~ .content .controls label[for=b5],
+#b9:checked ~ .content .controls label[for=b6],
+#b9:checked ~ .content .controls label[for=b7],
+#b10:checked ~ .content .controls label[for=b1] ,
+#b10:checked ~ .content .controls label[for=b2] ,
+#b10:checked ~ .content .controls label[for=b3] ,
+#b10:checked ~ .content .controls label[for=b4] ,
+#b10:checked ~ .content .controls label[for=b5] ,
+#b10:checked ~ .content .controls label[for=b6] ,
+#b10:checked ~ .content .controls label[for=b7] ,
+#b10:checked ~ .content .controls label[for=b8] {
+	display: none;
+}
+
+
+/* ARROWS */
+label:before {
+	content: "";
+	position: absolute;
+	background: 
+		linear-gradient(30deg, #fff0 60%, #626262 calc(60% + 1px)), 
+		linear-gradient(-30deg, #626262 40%, #fff0 calc(40% + 1px)), 
+		linear-gradient(-90deg, #fff0 70%, #626262 calc(70% + 1px));
+	width: 5vmin;
+	height: 6vmin;
+	border-radius: 10px;
+	right: 7vmin;
+	top: calc(50% - 3vmin);
+}
+
+/* LEFT ARROW */
+#b1:checked ~ .content .controls label[for=b1]:before,
+#b2:checked ~ .content .controls label[for=b1]:before,
+#b3:checked ~ .content .controls label[for=b2]:before,
+#b4:checked ~ .content .controls label[for=b3]:before,
+#b5:checked ~ .content .controls label[for=b4]:before,
+#b6:checked ~ .content .controls label[for=b5]:before,
+#b7:checked ~ .content .controls label[for=b6]:before,
+#b8:checked ~ .content .controls label[for=b7]:before,
+#b9:checked ~ .content .controls label[for=b8]:before {
+	left: 7vmin;
+	transform: rotate(180deg);
+}
+
+
+
+
+/* TITLES  */
+body:after {
+	content: "Saqueadores de Conventos (6b+) \a RISCO DE LOS SAQUEADORES";
+	position: absolute;
+	top: 2vh;
+	color: #fff;
+	font-size: 35px;
+	line-height: 45px;
+	transition: all 0.5s ease 0s;
+	text-shadow: 0px 1px 0 #000000d9;
+	white-space: pre-wrap;
+	text-align: center;
+	width: 100vw;
+	padding: 1vmin;
+    
+	font-weight: 300;
+}
+
+body:has(input#b1:checked):after {
+	content: "Microsoft Windows\a ";
+}
+
+body:has(input#b2:checked):after {
+	content: "Ubuntu \a ";
+}
+
+body:has(input#b3:checked):after {
+	content: "Kite GNU/Linux\a";
+}
+
+body:has(input#b4:checked):after {
+	content: "Linux\a";
+}
+
+body:has(input#b5:checked):after {
+	content: "Mac OS\a";
+}
+
+body:has(input#b6:checked):after {
+	content: "Chrome OS\a";
+}
+
+body:has(input#b7:checked):after {
+	content: "IOS\a";
+}
+
+body:has(input#b8:checked):after {
+	content: "Android\a";
+}
+
+
+
+
+
+/*** THUMBNAILS ***/
+.thumbnails {
+	position: absolute;
+	background: #00000000;
+	width: 100vw;
+	bottom: 3vh;
+	text-align: center;
+	padding: 1vmin;
+}
+
+.thumbnails label {
+	background-color: #fffffff9;
+	position: relative;
+	width: 8vmin;
+	height: 8vmin;
+	display: inline-block;
+	margin-left: 1vw;
+	background-image: var(--img);
+	background-size: cover;
+	background-position: center;
+	opacity: 0.5;
+	border-radius: 2px;
+}
+
+/* IMAGES / THUMBNAILS */
+body:has(input#b1:checked), .thumbnails label[for=b1] {
+	--img: url(win.png);
+}
+
+body:has(input#b2:checked), .thumbnails label[for=b2] {
+	--img: url(ubuntu\ desktopc.png);
+}
+
+body:has(input#b3:checked), .thumbnails label[for=b3] {
+	--img: url(Gnu.png);
+}
+
+body:has(input#b4:checked), .thumbnails label[for=b4] {
+	--img: url(linux.png);
+}
+
+body:has(input#b5:checked), .thumbnails label[for=b5] {
+	--img: url(mac.png);
+}
+
+body:has(input#b6:checked), .thumbnails label[for=b6] {
+	--img: url(chrome\ os.png);
+}
+
+body:has(input#b7:checked), .thumbnails label[for=b7] {
+	--img: url(ios.png);
+}
+
+body:has(input#b8:checked), .thumbnails label[for=b8] {
+	--img: url(android.png);
+}
+
+
+.thumbnails label:before { display: none; }
+.thumbnails label:hover { opacity: 1; }
+.thumbnails label:first-child { margin-left: 0; }
+
+#b1:checked ~ .content .thumbnails label[for=b1],
+#b2:checked ~ .content .thumbnails label[for=b2],
+#b3:checked ~ .content .thumbnails label[for=b3],
+#b4:checked ~ .content .thumbnails label[for=b4],
+#b5:checked ~ .content .thumbnails label[for=b5],
+#b6:checked ~ .content .thumbnails label[for=b6],
+#b7:checked ~ .content .thumbnails label[for=b7],
+#b8:checked ~ .content .thumbnails label[for=b8]
+
+{
+	opacity: 1;
+	box-shadow: 0 0 0.01vmin 0.5vmin #fff;
+}
+
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width:767px) {
+	body:after {
+		top: 2vh;
+		font-size: 20px;
+		white-space: initial;
+	}
+}
+
+@media only screen and (max-width:580px) {
+	body:after {
+		font-size: 25px;
+		white-space: pre-wrap;
+	}
+}
+
+/* BROWSER SUPPORT */
+.firefox {
+	background: #0008;
+	color: #fff;
+	position: absolute;
+	top: 45vh;
+	width: 45vmin;
+	padding: 2vmin 3vmin;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 24px;
+}
+
+.firefox span code {
+	font-size: 24px;
+	background: #0008;
+	padding: 0 10px;
+	border-radius: 25px;
+}
+
+@supports (-webkit-font-smoothing: antialiased) {
+	.firefox {
+		display: none;
+	}
+}

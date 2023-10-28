@@ -1,0 +1,124 @@
+	box-shadow: 0 0 0vmin 1vmin #fff, 0 0 10vmin 5vmin #000;
+
+
+
+background: #ffffff05;
+
+
+
+.thumbnails label:before { display: none; }
+.thumbnails label:hover { opacity: 1; }
+.thumbnails label:first-child { margin-left: 0; }
+
+#b1:checked ~ .content .thumbnails label[for=b1],
+#b2:checked ~ .content .thumbnails label[for=b2],
+#b3:checked ~ .content .thumbnails label[for=b3],
+#b4:checked ~ .content .thumbnails label[for=b4],
+#b5:checked ~ .content .thumbnails label[for=b5],
+#b6:checked ~ .content .thumbnails label[for=b6],
+#b7:checked ~ .content .thumbnails label[for=b7],
+#b8:checked ~ .content .thumbnails label[for=b8],
+#b9:checked ~ .content .thumbnails label[for=b9],
+#b10:checked ~ .content .thumbnails label[for=b10] {
+	opacity: 1;
+	box-shadow: 0 0 0.01vmin 0.5vmin #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*** THUMBNAILS ***/
+.thumbnails {
+	position: absolute;
+	background: #ffffff05;
+	width: 100vw;
+	bottom: 3vh;
+	text-align: center;
+	padding: 1vmin;
+}
+
+.thumbnails label {
+	background-color: #0008;
+	position: relative;
+	width: 8vmin;
+	height: 8vmin;
+	display: inline-block;
+	margin-left: 1vw;
+	background-image: var(--img);
+	background-size: cover;
+	background-position: center;
+	opacity: 0.5;
+	border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+<div class="thumbnails">
+		<label for="b1"></label>
+		<label for="b2"></label>
+		<label for="b3"></label>
+		<label for="b4"></label>
+		<label for="b5"></label>
+		<label for="b6"></label>
+		<label for="b7"></label>
+		<label for="b8"></label>
+		<label for="b9"></label>
+		<label for="b10"></label>
+	</div>
+
+
+
+
+
+<div class="controls">
+		<label for="b1"></label>
+		<label for="b2"></label>
+		<label for="b3"></label>
+		<label for="b4"></label>
+		<label for="b5"></label>
+		<label for="b6"></label>
+		<label for="b7"></label>
+		<label for="b8"></label>
+		<label for="b9"></label>
+		<label for="b10"></label>
+	</div>
+
+
+
+
+
+
+
+<input type="radio" name="control" id="b1" checked>
+<input type="radio" name="control" id="b2">
+<input type="radio" name="control" id="b3">
+<input type="radio" name="control" id="b4">
+<input type="radio" name="control" id="b5">
+<input type="radio" name="control" id="b6">
+<input type="radio" name="control" id="b7">
+<input type="radio" name="control" id="b8">
+<input type="radio" name="control" id="b9">
+<input type="radio" name="control" id="b10">
+
+
+
+
+
+<div class="content">
